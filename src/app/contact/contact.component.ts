@@ -3,7 +3,7 @@ import { Contact } from './contact.model';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'contact',
+  selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
@@ -23,7 +23,9 @@ export class ContactComponent implements OnInit {
       this.contacts = saveContacts;
     } else {
       this.contacts = await this.loadItemFromFile();
-          // not sure why there's an error here
+      // not sure how to solve the error here
+      // might have to command s to compile again to make it open up
+
     }
     this.sortByID(this.contacts);
   }
